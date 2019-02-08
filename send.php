@@ -8,8 +8,10 @@ $phone = '5512345678';
 $text = 'Mensaje de prueba';
 
 $dataRequest = [
-    'destination' => strlen($phone) == 10?'52' . $phone:$phone,
-    'messageText' => $text
+    'messages' => [
+        ['destination' => strlen($phone) == 10?'52' . $phone:$phone,
+            'messageText' => $text]
+    ]
 ];
 
 $user = getenv('API_USER');
@@ -18,7 +20,7 @@ $token = getenv('API_TOKEN');
 $client = new \GuzzleHttp\Client();
 echo json_encode($dataRequest) . "\n";
 
-$response = $client->request('POST', 'https://api-messaging.movile.com/v1/send-sms', [
+$response = $client->request('POST', 'https://api-messaging.movile.com/v1/send-bulk-sms', [
     'headers' => [
         'authenticationtoken' => $token,
         'username' => $user
