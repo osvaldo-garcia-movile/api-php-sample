@@ -1,0 +1,18 @@
+{
+    "name": "movile/php-sender",
+    "description": "Test Movile API Send",
+    "type": "library",
+    "require-dev": {
+        "guzzlehttp/guzzle": "^6.3",
+        "vlucas/phpdotenv": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Osvaldo Garcia",
+            "email": "osvaldo.garcia@wavy.global"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
