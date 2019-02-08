@@ -1,7 +1,5 @@
-#Instalation
+# Instalation
 
-<ol>
-<li>composer install</li>
-<li>cp .env.example .env</li>
-<li>php send.php</li>
-</ol>
+1. composer install
+2. cp .env.example .env
+3. php send.php
